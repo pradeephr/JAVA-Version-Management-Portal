@@ -1,0 +1,13 @@
+<div>
+	<h2 style="color:#FFFFFF">Project Base</h2>
+	<h5 style="color:#FFFFFF">Search:</h5> <input  ng-model="projectName" />
+	<ul style="list-style-type: none;">
+		 <li ng-repeat="project in projects | filter:projectName"  style="margin:0;width:40%;background-color:#00000">
+		 	<div style="background-color:#808080">
+		 		<input type="button" ng-click="getConfigsFor(project)" style="width:100%"  value="{{project | lowercase}}" />
+		 		<ul style="background-color:#808080;border:solid 1px #800080" id="{{project}}">
+		 		</ul>
+		 	</div>	
+		 </li>   
+	</ul>	
+</div>
